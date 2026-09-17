@@ -1,4 +1,4 @@
-# 🚀 Enterprise Multi-LLM Chatbot Framework
+#  Enterprise Multi-LLM Chatbot Framework
 
 Ein robustes, LLM-agnostisches Chat-Framework mit dynamischem Routing, integrierter Telemetrie (Langfuse), Fallback-Sicherheit und nativem Multimodal-Support (PDF, CSV, JSON, MD, Bilder).
 
@@ -7,11 +7,11 @@ Ein robustes, LLM-agnostisches Chat-Framework mit dynamischem Routing, integrier
 ![LiteLLM](https://img.shields.io/badge/Routing-LiteLLM-green)
 ![Langfuse](https://img.shields.io/badge/Observability-Langfuse-purple)
 
-## 🌟 Warum dieses Projekt?
+##  Warum dieses Projekt?
 
-* 🛡️ **Zero-Downtime Fallback Chain:** Automatisches Ausfall-Routing bei API-Problemen.
+* 🛡️**Zero-Downtime Fallback Chain:** Automatisches Ausfall-Routing bei API-Problemen.
 * 📊 **Enterprise Observability:** Langfuse Tracing für Kosten- und Tokenkontrolle.
-* 🧠 **LLM-Agnostisch:** 100+ Modelle via LiteLLM nutzbar.
+*  **LLM-Agnostisch:** 100+ Modelle via LiteLLM nutzbar.
 * 📎 **Auto-Parsing:** Automatischer Text-Import für PDF, CSV, JSON, MD & Base64 Vision für Bilder.
 * 🧩 **Modulare Architektur:** Klare Trennung von Backend, UI, Memory & Utility-Dateien.
 
