@@ -3,8 +3,8 @@ from litellm import completion
 from typing import Dict, Any
 from config import config
 
-litellm.success_callback = ["langfuse"]
-litellm.failure_callback = ["langfuse"]
+# litellm.success_callback = ["langfuse"]
+# litellm.failure_callback = ["langfuse"]
 
 class AgnosticLLMClient:
     def generate_response(

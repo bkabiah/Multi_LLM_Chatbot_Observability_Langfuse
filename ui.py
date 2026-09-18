@@ -27,10 +27,10 @@ def create_ui(chat_fn, reset_fn):
             with gr.Column(scale=1):
                 gr.Markdown("### Steuerzentrale")
                 model_selector = gr.Dropdown(
-                    choices=list(config.SUPPORTED_MODELS.keys()),
-                    value="Gemini 1.5 Pro (Google)",
-                    label="LLM Modell wählen"
-                )
+    choices=list(config.SUPPORTED_MODELS.keys()),
+    value="Gemini Flash Latest (Google)",  # <-- ANGEPASST
+    label="LLM Modell wählen"
+)
                 temp_slider = gr.Slider(
                     minimum=0.0, maximum=1.0, value=0.7, step=0.1, 
                     label="Temperature"
