@@ -51,6 +51,8 @@ graph TD
     EXT2 -->|Antwort| LLM
     LLM -->|6. Formatierter Response| UI
 
+```
+
 
 ## 🚀 Quick Start
 ```bash
