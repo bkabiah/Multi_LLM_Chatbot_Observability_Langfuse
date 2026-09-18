@@ -25,22 +25,22 @@ Das System folgt einer klar getrennten, modularen Architektur, die Wartbarkeit u
 
 ```mermaid
 graph TD
-    User([👤 Benutzer]) -->|Interaktion| UI[🖥️ Gradio UI<br/>app.py / ui.py]
+    User([👤 Benutzer]) -->|Interaktion| UI[ Gradio UI<br/>app.py / ui.py]
     
-    UI -->|1. Nachricht & Dateien| FU[📂 file_utils.py<br/>Parser & Base64]
-    UI -->|2. Verlauf| MEM[🧠 ConversationMemory<br/>memory.py]
+    UI -->|1. Nachricht & Dateien| FU[ file_utils.py<br/>Parser & Base64]
+    UI -->|2. Verlauf| MEM[ ConversationMemory<br/>memory.py]
     
-    FU -->|Extrahierter Text / Bilder| APP[⚙️ Chat Interface<br/>app.py]
+    FU -->|Extrahierter Text / Bilder| APP[ Chat Interface<br/>app.py]
     MEM -->|Formatierter Prompt| APP
     
-    APP -->|3. Anfrage mit Metadaten| LLM[🤖 AgnosticLLMClient<br/>llm_engine.py]
+    APP -->|3. Anfrage mit Metadaten| LLM[ AgnosticLLMClient<br/>llm_engine.py]
     
-    LLM -->|4. Primary Request| LITE[🔀 LiteLLM Router]
-    LITE -->|Erfolg| EXT1((🌐 Externe LLMs<br/>GPT-4o, Claude, Gemini, Llama))
-    LITE -->|Fehler| FB[🛡️ Fallback Chain<br/>config.py]
-    FB -->|Retry| EXT2((🌐 Fallback LLMs))
+    LLM -->|4. Primary Request| LITE[ LiteLLM Router]
+    LITE -->|Erfolg| EXT1(( Externe LLMs<br/>GPT-4o, Claude, Gemini, Llama))
+    LITE -->|Fehler| FB[ Fallback Chain<br/>config.py]
+    FB -->|Retry| EXT2(( Fallback LLMs))
     
-    LLM -.->|5. Telemetrie & Tracing| OBS[📊 Langfuse<br/>observability.py]
+    LLM -.->|5. Telemetrie & Tracing| OBS[ Langfuse<br/>observability.py]
     
     EXT1 -->|Antwort| LLM
     EXT2 -->|Antwort| LLM
