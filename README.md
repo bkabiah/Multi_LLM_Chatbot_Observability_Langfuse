@@ -1,30 +1,25 @@
 #   Multi-LLM Chatbot Framework
 
-## 📖 Einführung
+##  Einführung
 
 Das **Enterprise Multi-LLM Chatbot Framework** ist eine hochverfügbare, modulare und LLM-agnostische Lösung, die speziell für professionelle Anwendungsfälle im Software-Engineering entwickelt wurde. Es kombiniert intelligentes, dynamisches Routing über LiteLLM mit einer robusten Fallback-Kette, um Zero-Downtime bei API-Ausfällen oder Rate-Limits zu garantieren. Durch die native Integration von Langfuse bietet das System Enterprise-grade Observability für präzises Token-, Kosten- und Performance-Tracking. Ein automatisierter Multimodal-Parser ermöglicht zudem die nahtlose Verarbeitung von PDFs, CSV, JSON, Markdown und Bildern (Vision) direkt im Chat-Verlauf. Dank der strikten Trennung von UI, Business-Logik und Infrastruktur ist das Framework ideal für den produktiven Einsatz und eine einfache Skalierung in Cloud-Umgebungen geeignet.
 Ein robustes, LLM-agnostisches Chat-Framework mit dynamischem Routing, integrierter Telemetrie (Langfuse), Fallback-Sicherheit und nativem Multimodal-Support (PDF, CSV, JSON, MD, Bilder).
 
-![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
-![Gradio](https://img.shields.io/badge/UI-Gradio-orange)
-![LiteLLM](https://img.shields.io/badge/Routing-LiteLLM-green)
-![Langfuse](https://img.shields.io/badge/Observability-Langfuse-purple)
-
 ##  Warum dieses Projekt?
 
-* 🛡️**Zero-Downtime Fallback Chain:** Automatisches Ausfall-Routing bei API-Problemen.
-* 📊 **Enterprise Observability:** Langfuse Tracing für Kosten- und Tokenkontrolle.
-*  **LLM-Agnostisch:** 100+ Modelle via LiteLLM nutzbar.
-* 📎 **Auto-Parsing:** Automatischer Text-Import für PDF, CSV, JSON, MD & Base64 Vision für Bilder.
-* 🧩 **Modulare Architektur:** Klare Trennung von Backend, UI, Memory & Utility-Dateien.
+* **Zero-Downtime Fallback Chain:** Automatisches Ausfall-Routing bei API-Problemen.
+* **Enterprise Observability:** Langfuse Tracing für Kosten- und Tokenkontrolle.
+* **LLM-Agnostisch:** 100+ Modelle via LiteLLM nutzbar.
+* **Auto-Parsing:** Automatischer Text-Import für PDF, CSV, JSON, MD & Base64 Vision für Bilder.
+* **Modulare Architektur:** Klare Trennung von Backend, UI, Memory & Utility-Dateien.
 
-## 🛠️ Tech Stack
+## Tech Stack
 * Frontend: Gradio
 * Routing: LiteLLM
 * Observability: Langfuse
 * Parsing: PyPDF2, base64, mimetypes
 
-## 🏗️ Architektur
+## Architektur
 
 Das System folgt einer klar getrennten, modularen Architektur, die Wartbarkeit und Testbarkeit sicherstellt:
 
@@ -54,8 +49,3 @@ graph TD
 ```
 
 
-## 🚀 Quick Start
-```bash
-pip install -U litellm gradio python-dotenv PyPDF2 "langfuse<=2.50.0"
-python app.py
-```
